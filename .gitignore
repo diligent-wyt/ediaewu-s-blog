@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+*.tsbuildinfo
+
+# environment
+.env*.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
