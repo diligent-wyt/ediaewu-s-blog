@@ -66,3 +66,27 @@ export function getPostBySlug(slug: string): Post | null {
   return posts.find((post) => post.slug === slug) ?? null;
 }
 
+export interface PaginatedResult {
+  posts: Post[];
+  total: number;
+  page: number;
+  pageSize: number;
+  totalPages: number;
+}
+
+const PAGE_SIZE = 5;
+
+export function paginatePosts(
+  posts: Post[],
+  page: number
+): PaginatedResult {
+  const total = posts.length;
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const safePage = Math.max(1, Math.min(page, totalPages));
+  const slice = posts.slice(
+    (safePage - 1) * PAGE_SIZE,
+    safePage * PAGE_SIZE
+  );
+  return { posts: slice, total, page: safePage, pageSize: PAGE_SIZE, totalPages };
+}
+

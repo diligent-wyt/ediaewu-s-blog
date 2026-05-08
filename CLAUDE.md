@@ -36,25 +36,25 @@ File name = slug. Category derived from parent directory. Every Markdown file ha
 ---
 title: "Article Title"
 date: "2026-01-15"
-category: "tech"            # tech | life
+category: "tech" # tech | life
 tags: ["React", "TypeScript"]
 summary: "One-line summary"
-draft: false                # true = hidden from production
-updated: "2026-03-01"       # optional
+draft: false # true = hidden from production
+updated: "2026-03-01" # optional
 ---
 ```
 
 ## Routes
 
-| Page | Route |
-|------|-------|
-| Cover (splash) | `/` |
-| Post list | `/posts` |
-| Post detail | `/posts/[slug]` |
+| Page            | Route                    |
+| --------------- | ------------------------ |
+| Cover (splash)  | `/`                      |
+| Post list       | `/posts`                 |
+| Post detail     | `/posts/[slug]`          |
 | Category filter | `/categories/[category]` |
-| Tag filter | `/tags/[tag]` |
-| About | `/about` |
-| 404 | catch-all |
+| Tag filter      | `/tags/[tag]`            |
+| About           | `/about`                 |
+| 404             | catch-all                |
 
 ## Commands
 
@@ -76,3 +76,12 @@ pnpm test         # Run tests (Vitest/Jest)
 **In scope for v1**: Splash/cover page, Markdown rendering with code highlighting, categories/tags filtering, Giscus comments, likes, SEO (meta tags, sitemap.xml, robots.txt, Open Graph), RSS feed, dark/light theme, About page.
 
 **Explicitly out of scope for v1**: CMS/backend, user auth, drafts scheduling, full-text search, analytics, i18n, comment moderation panel, image CDN, email newsletter.
+
+## Collaboration Rules
+
+- Before modifying any file, list which files will be changed and why.
+- Bug fixes must ONLY touch the files necessary to resolve the bug. No "preventative" config changes, no refactoring, no style tweaks.
+- If a fix has an optional/preventative component, present it separately and wait for explicit approval.
+- Never introduce new configuration concepts (e.g., `@source`, new plugins, new build settings) during a bug fix unless the bug itself demands it.
+- After every task, report the actual diff: what files were changed, added, or deleted. Compare against the plan.
+- Do not modify `.css` files during a content/Markdown-related fix unless the CSS file IS the root cause.

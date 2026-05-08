@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ediaewu's Blog
 
-## Getting Started
+个人技术 + 生活博客。用 Markdown 写作，git push 发布，Vercel 自动部署。
 
-First, run the development server:
+## 技术栈
+
+- **框架**：Next.js 16 (App Router) + React 19
+- **语言**：TypeScript
+- **样式**：Tailwind CSS v4
+- **内容**：Markdown (gray-matter + react-markdown + rehype-highlight)
+- **评论**：Giscus（基于 GitHub Discussions）
+- **部署**：Vercel
+
+## 本地运行
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm build      # 生产构建
+pnpm start      # 启动生产服务器
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 发布文章
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. 在 `content/tech/` 或 `content/life/` 下新建 `.md` 文件
+2. 填写 frontmatter（标题、日期、分类、标签、摘要）
+3. `git commit` → `git push`
+4. Vercel 自动部署
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```yaml
+---
+title: "文章标题"
+date: "2026-05-01"
+category: "tech"
+tags: ["React", "TypeScript"]
+summary: "一句话摘要"
+draft: false
+---
+```
 
-## Learn More
+## 项目结构
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+content/         # Markdown 文章
+src/app/         # Next.js 路由页面
+src/components/  # 复用组件
+src/lib/         # 工具函数
+data/            # 运行时数据（点赞数）
+public/          # 静态资源
+```

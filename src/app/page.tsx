@@ -62,7 +62,7 @@ export default function CoverPage() {
           Ediaewu's Blog
         </h1>
         <p className="mt-5 text-base tracking-widest text-gray-400">
-          笔墨之间的技术与生活
+          也无风雨也无晴
         </p>
         <Link
           href="/posts"
