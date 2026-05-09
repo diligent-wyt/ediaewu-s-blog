@@ -72,5 +72,3 @@ CC Switch 支持多种模型，你可以后续根据需要添加其他模型。
 ![用量](/images/用量信息.png)
 
 DeepSeek V4 Pro 的计费按 token 计算，相比 Anthropic 的官方模型，费用约为 **十分之一甚至更低**。
-
----

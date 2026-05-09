@@ -6,7 +6,6 @@ import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { Giscus } from "@/components/Giscus";
-import { LikeButton } from "@/components/LikeButton";
 import { BackToTop } from "@/components/BackToTop";
 import { BlogPageIcon, BlogPageRightIcon } from "@/components/BlogIcon";
 
@@ -114,10 +113,6 @@ export default async function PostPage({ params }: PageParams) {
           ) : null}
         </div>
       </nav>
-
-      <div className="mb-8 flex items-center justify-center gap-3">
-        <LikeButton slug={slug} />
-      </div>
 
       <Giscus slug={slug} />
       <BackToTop />
