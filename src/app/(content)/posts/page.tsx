@@ -20,13 +20,11 @@ export default function PostsPage() {
         {posts.length === 0 ? (
           <p className="text-gray-500">还没有文章。</p>
         ) : (
-          <ul className="divide-y divide-gray-100">
+          <div className="space-y-4">
             {posts.map((post) => (
-              <li key={post.slug} className="py-8 first:pt-0 last:pb-0">
-                <PostCard post={post} />
-              </li>
+              <PostCard key={post.slug} post={post} />
             ))}
-          </ul>
+          </div>
         )}
       </div>
 

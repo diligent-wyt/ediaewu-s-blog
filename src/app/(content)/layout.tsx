@@ -13,7 +13,7 @@ export default function ContentLayout({
 }>) {
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <nav className="mx-auto w-full max-w-3xl px-4 flex h-11 items-center border-b border-gray-200 bg-white">
+      <nav className="sticky top-0 z-50 mx-auto w-full max-w-3xl px-4 flex h-11 items-center border-b border-gray-200/60 bg-white/75 backdrop-blur-md saturate-150">
         <Link
           href="/"
           className="text-sm font-semibold tracking-wide text-gray-700 hover:text-black flex items-center shrink-0"

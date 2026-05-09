@@ -43,16 +43,16 @@ export default function AboutPage() {
               href="https://github.com/diligent-wyt"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#3b5998] hover:text-[#2d4373]"
+              className="text-[var(--accent)] hover:text-[var(--accent-hover)]"
             >
               GitHub
             </a>
             <span className="text-gray-300">|</span>
-            <Link href="/posts" className="text-[#3b5998] hover:text-[#2d4373]">
+            <Link href="/posts" className="text-[var(--accent)] hover:text-[var(--accent-hover)]">
               文章列表
             </Link>
             <span className="text-gray-300">|</span>
-            <Link href="/" className="text-[#3b5998] hover:text-[#2d4373]">
+            <Link href="/" className="text-[var(--accent)] hover:text-[var(--accent-hover)]">
               首页
             </Link>
           </div>

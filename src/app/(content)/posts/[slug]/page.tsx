@@ -95,7 +95,7 @@ export default async function PostPage({ params }: PageParams) {
           {prevPost ? (
             <Link
               href={`/posts/${encodeURIComponent(prevPost.slug)}`}
-              className="hover:text-[#3b5998]"
+              className="hover:text-[var(--accent)]"
             >
               <BlogPageIcon />
               上一篇：《{prevPost.title}》
@@ -106,7 +106,7 @@ export default async function PostPage({ params }: PageParams) {
           {nextPost ? (
             <Link
               href={`/posts/${encodeURIComponent(nextPost.slug)}`}
-              className="hover:text-[#3b5998]"
+              className="hover:text-[var(--accent)]"
             >
               《{nextPost.title}》下一篇 <BlogPageRightIcon />
             </Link>

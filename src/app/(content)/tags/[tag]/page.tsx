@@ -42,13 +42,11 @@ export default async function TagPage({ params }: PageParams) {
       </p>
 
       <div className="flex-1">
-        <ul className="space-y-8">
+        <div className="space-y-4">
           {posts.map((post) => (
-            <li key={post.slug}>
-              <PostCard post={post} />
-            </li>
+            <PostCard key={post.slug} post={post} />
           ))}
-        </ul>
+        </div>
       </div>
 
       <Pagination page={page} totalPages={totalPages} basePath={`/tags/${tag}`} />

@@ -49,13 +49,11 @@ export default async function CategoryPage({ params }: PageParams) {
         {posts.length === 0 ? (
           <p className="text-gray-500">该分类下还没有文章。</p>
         ) : (
-          <ul className="space-y-8">
+          <div className="space-y-4">
             {posts.map((post) => (
-              <li key={post.slug}>
-                <PostCard post={post} />
-              </li>
+              <PostCard key={post.slug} post={post} />
             ))}
-          </ul>
+          </div>
         )}
       </div>
 

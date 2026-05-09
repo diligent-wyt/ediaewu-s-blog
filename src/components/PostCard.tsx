@@ -7,10 +7,10 @@ interface PostCardProps {
 
 export function PostCard({ post }: PostCardProps) {
   return (
-    <article>
+    <article className="rounded-lg border border-gray-200/60 bg-white p-6 transition-shadow hover:shadow-sm">
       <Link
         href={`/posts/${encodeURIComponent(post.slug)}`}
-        className="text-xl font-semibold text-[#3b5998] hover:text-[#2d4373]"
+        className="text-xl font-semibold text-[var(--accent)] hover:text-[var(--accent-hover)]"
       >
         {post.title}
       </Link>

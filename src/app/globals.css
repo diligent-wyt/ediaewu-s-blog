@@ -5,18 +5,18 @@
 
 /* ===== Design System: Light Mode ===== */
 :root {
-  --bg-page: #faf8f5;
+  --bg-page: #f4f5f7;
   --bg-surface: #ffffff;
   --text-primary: #1a1a1a;
   --text-secondary: #6b7280;
   --text-tertiary: #9ca3af;
   --border: #e5e7eb;
-  --accent: #3b5998;
-  --accent-hover: #2d4373;
+  --accent: #2c3e6b;
+  --accent-hover: #1a2744;
   --tag-bg: #f3f4f6;
   --tag-text: #4b5563;
-  --category-bg: #eff6ff;
-  --category-text: #3b5998;
+  --category-bg: #eef1f7;
+  --category-text: #2c3e6b;
 }
 
 /* ===== Design System: Dark Mode ===== */

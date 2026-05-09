@@ -45,13 +45,11 @@ export default async function SearchPage({ searchParams }: Props) {
         {results.length === 0 && q ? (
           <p className="text-gray-500">未找到相关文章。</p>
         ) : (
-          <ul className="divide-y divide-gray-100">
+          <div className="space-y-4">
             {results.map((post) => (
-              <li key={post.slug} className="py-8 first:pt-0 last:pb-0">
-                <PostCard post={post} />
-              </li>
+              <PostCard key={post.slug} post={post} />
             ))}
-          </ul>
+          </div>
         )}
       </div>
     </main>

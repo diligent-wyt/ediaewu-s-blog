@@ -37,7 +37,7 @@ export function Pagination({ page, totalPages, basePath }: PaginationProps) {
         p === page ? (
           <span
             key={p}
-            className="w-9 h-9 flex items-center justify-center rounded border border-[#3b5998] bg-[#3b5998] text-white text-sm font-semibold"
+            className="w-9 h-9 flex items-center justify-center rounded border border-[var(--accent)] bg-[var(--accent)] text-white text-sm font-semibold"
           >
             {p}
           </span>
