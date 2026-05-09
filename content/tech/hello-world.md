@@ -1,5 +1,5 @@
 ---
-title: "Hello World — 我的第一篇技术博客"
+title: "我的第一篇技术博客"
 date: "2026-05-01"
 category: "tech"
 tags: ["React", "TypeScript", "博客"]
@@ -21,11 +21,11 @@ draft: false
 
 最终选了这套组合：
 
-| 工具 | 用途 |
-|------|------|
-| Next.js | 框架，负责页面渲染 |
-| Markdown | 写作格式 |
-| Vercel | 免费部署 |
+| 工具     | 用途               |
+| -------- | ------------------ |
+| Next.js  | 框架，负责页面渲染 |
+| Markdown | 写作格式           |
+| Vercel   | 免费部署           |
 
 ## 一个简单的 React 组件
 
