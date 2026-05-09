@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: "/search",
     },
-    sitemap: "https://ediaewu.com/sitemap.xml",
+    sitemap: `${process.env.SITE_URL ?? "https://ediaewu.com"}/sitemap.xml`,
   };
 }

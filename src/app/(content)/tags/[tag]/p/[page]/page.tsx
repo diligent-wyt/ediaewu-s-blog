@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, paginatePosts } from "@/lib/posts";
 import { PostCard } from "@/components/PostCard";
@@ -5,6 +6,15 @@ import { Pagination } from "@/components/Pagination";
 
 interface PageParams {
   params: Promise<{ tag: string; page: string }>;
+}
+
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+  const { tag, page } = await params;
+  const decodedTag = decodeURIComponent(tag);
+  return {
+    title: `${decodedTag} - 标签 - 第${page}页`,
+    robots: { index: false, follow: true },
+  };
 }
 
 export async function generateStaticParams() {

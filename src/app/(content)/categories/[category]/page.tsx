@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, paginatePosts } from "@/lib/posts";
 import { PostCard } from "@/components/PostCard";
@@ -15,6 +16,15 @@ const CATEGORY_LABELS: Record<string, string> = {
   tech: "技术",
   life: "生活",
 };
+
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+  const { category } = await params;
+  const label = CATEGORY_LABELS[category] ?? category;
+  return {
+    title: `${label} - 分类`,
+    description: `${label}相关的文章列表`,
+  };
+}
 
 export default async function CategoryPage({ params }: PageParams) {
   const { category } = await params;

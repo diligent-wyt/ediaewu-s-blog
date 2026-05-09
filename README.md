@@ -38,6 +38,23 @@ draft: false
 ---
 ```
 
+## 部署
+
+### Vercel（推荐）
+
+1. 将项目导入 Vercel（支持 GitHub 自动导入）
+2. 设置环境变量 `SITE_URL` 为你的域名（如 `https://ediaewu.com`）
+3. Vercel 自动检测 Next.js 项目，无需额外配置
+4. 每次 `git push` 自动部署
+
+### 环境变量
+
+| 变量 | 说明 | 示例 |
+|------|------|------|
+| `SITE_URL` | 站点完整 URL（用于 sitemap、RSS、OG） | `https://ediaewu.com` |
+
+复制 `.env.example` 为 `.env` 并填入实际值。
+
 ## 项目结构
 
 ```

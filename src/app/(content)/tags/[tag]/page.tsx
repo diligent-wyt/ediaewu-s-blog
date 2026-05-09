@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, paginatePosts } from "@/lib/posts";
 import { PostCard } from "@/components/PostCard";
@@ -10,7 +11,16 @@ interface PageParams {
 export async function generateStaticParams() {
   const posts = getAllPosts();
   const tagSet = new Set(posts.flatMap((post) => post.tags));
-  return [...tagSet].map((tag) => ({ tag }));
+  return [...tagSet].map((tag) => ({ tag: encodeURIComponent(tag) }));
+}
+
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+  const { tag } = await params;
+  const decodedTag = decodeURIComponent(tag);
+  return {
+    title: `${decodedTag} - 标签`,
+    description: `包含"${decodedTag}"标签的文章列表`,
+  };
 }
 
 export default async function TagPage({ params }: PageParams) {

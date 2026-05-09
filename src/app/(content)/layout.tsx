@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { BlogHeaderIcon, BlogSearchIcon } from "@/components/BlogIcon";
+import {
+  BlogAboutIcon,
+  BlogHeaderIcon,
+  BlogSearchIcon,
+  BlogSubcribeIcon,
+} from "@/components/BlogIcon";
 
 export default function ContentLayout({
   children,
@@ -36,11 +41,11 @@ export default function ContentLayout({
         </form>
 
         <div className="flex items-center gap-4 text-sm text-gray-500 shrink-0">
-          <Link href="/about" className="hover:text-gray-800">
-            About
+          <Link href="/about" className="hover:text-gray-800" title="关于">
+            <BlogAboutIcon />
           </Link>
-          <a href="/feed.xml" className="hover:text-gray-800">
-            RSS
+          <a href="/feed.xml" className="hover:text-gray-800" title="RSS订阅">
+            <BlogSubcribeIcon />
           </a>
         </div>
       </nav>

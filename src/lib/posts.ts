@@ -63,7 +63,7 @@ export function getAllPosts(): Post[] {
 
 export function getPostBySlug(slug: string): Post | null {
   const posts = readMarkdownFiles(CONTENT_ROOT);
-  return posts.find((post) => post.slug === slug) ?? null;
+  return posts.find((post) => post.slug === slug && !post.draft) ?? null;
 }
 
 export interface PaginatedResult {

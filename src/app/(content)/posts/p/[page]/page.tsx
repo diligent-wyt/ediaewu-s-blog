@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import { getAllPosts, paginatePosts } from "@/lib/posts";
 import { PostCard } from "@/components/PostCard";
 import { Pagination } from "@/components/Pagination";
 
 interface PageParams {
   params: Promise<{ page: string }>;
+}
+
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+  const { page } = await params;
+  return {
+    title: `文章列表 - 第${page}页`,
+    robots: { index: false, follow: true },
+  };
 }
 
 export async function generateStaticParams() {

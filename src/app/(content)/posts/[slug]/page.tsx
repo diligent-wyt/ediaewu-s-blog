@@ -121,6 +121,22 @@ export default async function PostPage({ params }: PageParams) {
 
       <Giscus slug={slug} />
       <BackToTop />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            datePublished: post.date,
+            dateModified: post.updated ?? post.date,
+            author: { "@type": "Person", name: "Ediaewu" },
+            description: post.summary,
+            url: `${process.env.SITE_URL ?? "https://ediaewu.com"}/posts/${encodeURIComponent(post.slug)}`,
+          }),
+        }}
+      />
     </main>
   );
 }

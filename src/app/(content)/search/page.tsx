@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/posts";
 import { PostCard } from "@/components/PostCard";
+
+export const metadata: Metadata = {
+  title: "搜索",
+  robots: { index: false },
+};
 
 interface Props {
   searchParams: Promise<{ q?: string }>;

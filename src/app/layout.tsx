@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL ?? "https://ediaewu.com"),
   title: {
     default: "Ediaewu's Blog",
     template: "%s - Ediaewu's Blog",
@@ -21,8 +22,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ediaewu's Blog",
     description: "一个前端工程师的技术与生活",
+    url: process.env.SITE_URL ?? "https://ediaewu.com",
+    siteName: "Ediaewu's Blog",
     type: "website",
     locale: "zh_CN",
+  },
+  twitter: {
+    card: "summary",
+    title: "Ediaewu's Blog",
+    description: "一个前端工程师的技术与生活",
   },
   robots: {
     index: true,
@@ -48,7 +56,7 @@ export default function RootLayout({
           href="/feed.xml"
         />
       </head>
-      <body className="min-h-full flex flex-col text-black">
+      <body className="min-h-full flex flex-col">
         <div className="flex-1 flex flex-col">{children}</div>
       </body>
     </html>

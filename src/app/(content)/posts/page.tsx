@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { getAllPosts, paginatePosts } from "@/lib/posts";
 import { PostCard } from "@/components/PostCard";
 import { Pagination } from "@/components/Pagination";
+
+export const metadata: Metadata = {
+  title: "文章列表",
+  description: "一个前端工程师的技术与生活文章",
+};
 
 export default function PostsPage() {
   const allPosts = getAllPosts();
