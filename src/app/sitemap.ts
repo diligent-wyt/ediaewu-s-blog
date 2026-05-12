@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts, paginatePosts } from "@/lib/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.SITE_URL ?? "https://ediaewu.com";
+  const baseUrl = process.env.SITE_URL ?? "https://ediaewu.cn";
   const allPosts = getAllPosts();
 
   const staticRoutes = [

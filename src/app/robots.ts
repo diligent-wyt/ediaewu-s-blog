@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/search",
     },
-    sitemap: `${process.env.SITE_URL ?? "https://ediaewu.com"}/sitemap.xml`,
+    sitemap: `${process.env.SITE_URL ?? "https://ediaewu.cn"}/sitemap.xml`,
   };
 }

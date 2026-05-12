@@ -2,7 +2,7 @@ import { Feed } from "feed";
 import { getAllPosts } from "@/lib/posts";
 
 export function generateFeedXml(): string {
-  const baseUrl = process.env.SITE_URL ?? "https://ediaewu.com";
+  const baseUrl = process.env.SITE_URL ?? "https://ediaewu.cn";
   const posts = getAllPosts();
 
   const feed = new Feed({

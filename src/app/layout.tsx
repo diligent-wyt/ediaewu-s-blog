@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL ?? "https://ediaewu.com"),
+  metadataBase: new URL(process.env.SITE_URL ?? "https://ediaewu.cn"),
   title: {
     default: "Ediaewu's Blog",
     template: "%s - Ediaewu's Blog",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ediaewu's Blog",
     description: "一个前端工程师的技术与生活",
-    url: process.env.SITE_URL ?? "https://ediaewu.com",
+    url: process.env.SITE_URL ?? "https://ediaewu.cn",
     siteName: "Ediaewu's Blog",
     type: "website",
     locale: "zh_CN",

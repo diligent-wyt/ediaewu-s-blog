@@ -128,7 +128,7 @@ export default async function PostPage({ params }: PageParams) {
             dateModified: post.updated ?? post.date,
             author: { "@type": "Person", name: "Ediaewu" },
             description: post.summary,
-            url: `${process.env.SITE_URL ?? "https://ediaewu.com"}/posts/${encodeURIComponent(post.slug)}`,
+            url: `${process.env.SITE_URL ?? "https://ediaewu.cn"}/posts/${encodeURIComponent(post.slug)}`,
           }),
         }}
       />
