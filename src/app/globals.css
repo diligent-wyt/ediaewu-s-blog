@@ -45,7 +45,9 @@
 
 /* ===== Base ===== */
 body {
+  background: #f4f5f7;
   background: var(--bg-page);
+  color: #1a1a1a;
   color: var(--text-primary);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
@@ -56,11 +58,13 @@ body {
   font-family: var(--font-prose);
   font-size: 1.0625rem;
   line-height: 1.85;
+  color: #1a1a1a;
   color: var(--text-primary);
 }
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
   font-family: var(--font-prose);
   font-weight: 700;
+  color: #1a1a1a;
   color: var(--text-primary);
 }
 .prose h2 {
@@ -68,6 +72,7 @@ body {
   margin-top: 2em;
   margin-bottom: 0.75em;
   padding-bottom: 0.5em;
+  border-bottom: 1px solid #e5e7eb;
   border-bottom: 1px solid var(--border);
 }
 .prose h3 {
@@ -79,16 +84,20 @@ body {
   margin-bottom: 1.5em;
 }
 .prose a {
+  color: #2c3e6b;
   color: var(--accent);
 }
 .prose a:hover {
+  color: #1a2744;
   color: var(--accent-hover);
 }
 .prose blockquote {
   margin: 1.5em 0;
   padding: 0.75em 1.25em;
+  border-left: 3px solid #e5e7eb;
   border-left: 3px solid var(--border);
   background: #f9fafb;
+  color: #6b7280;
   color: var(--text-secondary);
 }
 .prose blockquote p {
@@ -111,6 +120,7 @@ body {
 .prose hr {
   margin: 2em 0;
   border: none;
+  border-top: 1px solid #e5e7eb;
   border-top: 1px solid var(--border);
 }
 .prose code {
@@ -134,5 +144,6 @@ body {
 }
 .prose strong {
   font-weight: 700;
+  color: #1a1a1a;
   color: var(--text-primary);
 }
